@@ -1,0 +1,254 @@
+/* ======================= */
+/* Estilos Generales */
+/* ======================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #000;
+    color: white;
+}
+
+/* ======================= */
+/* Encabezado */
+/* ======================= */
+
+.header{
+    width: 100%;
+    padding: 20px 8%;
+    background: #021b12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0f8b5f;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    color: #2ecc71;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu li a:hover{
+    color: #2ecc71;
+}
+
+/* ======================= */
+/* Hero */
+/* ======================= */
+
+.hero{
+    width: 100%;
+    height: 50vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop')
+    center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenido{
+    margin-top: 80px;
+    max-width: 800px;
+}
+
+.contenido h1{
+    font-size: 55px;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    color: #ddd;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+/* ======================= */
+/* Contenedor Principal */
+/* ======================= */
+
+.calculadora-container{
+    width: 90%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* ======================= */
+/* Caja Calculadora */
+/* ======================= */
+
+.calculadora-box{
+    background: #071f17;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    border: 1px solid #0f8b5f;
+}
+
+.calculadora-box h2{
+    color: #2ecc71;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.campo{
+    margin-bottom: 20px;
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.campo input,
+.campo select{
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    border: 1px solid #0f8b5f;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus{
+    border-color: #2ecc71;
+}
+
+/* Botón */
+
+button{
+    width: 100%;
+    padding: 16px;
+    background: #0f8b5f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #2ecc71;
+    transform: scale(1.02);
+}
+
+/* ======================= */
+/* Información */
+/* ======================= */
+
+.info-box{
+    padding: 20px;
+}
+
+.info-box h2{
+    font-size: 38px;
+    color: #2ecc71;
+    margin-bottom: 25px;
+}
+
+.info-box p{
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.cards{
+    display: grid;
+    gap: 20px;
+}
+
+.card{
+    background: #071f17;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #2ecc71;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card h3{
+    margin-bottom: 12px;
+    color: #2ecc71;
+}
+
+.card p{
+    margin: 0;
+}
+
+/* ======================= */
+/* Responsive */
+/* ======================= */
+
+@media(max-width: 900px){
+
+    .header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenido h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .contenido h1{
+        font-size: 32px;
+    }
+
+    .contenido p{
+        font-size: 16px;
+    }
+
+    .calculadora-box{
+        padding: 25px;
+    }
+
+    .info-box h2{
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+}
+
+/* Header */
+
+.header{
+    background:#021b12;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid #0f8b5f;
+}
+
+.logo{
+    color:#2ecc71;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#2ecc71;
+}
+
+/* Hero */
+
+.hero{
+    height:85vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75),
+    rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1600&auto=format&fit=crop')
+    center/cover;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.contenido{
+    max-width:800px;
+}
+
+.contenido h1{
+    font-size:65px;
+    color:#2ecc71;
+    margin-bottom:20px;
+}
+
+.contenido p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#0f8b5f;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#2ecc71;
+}
+
+/* Indicadores */
+
+.indicadores{
+    width:90%;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card-indicador{
+    background:#071f17;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #0f8b5f;
+}
+
+.card-indicador h3{
+    color:#2ecc71;
+    margin-bottom:15px;
+}
+
+.card-indicador span{
+    display:block;
+    font-size:35px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.positivo{
+    color:#2ecc71;
+}
+
+.negativo{
+    color:#ff6666;
+}
+
+/* Empresas */
+
+.empresas{
+    width:90%;
+    margin:100px auto;
+}
+
+.empresas h2{
+    text-align:center;
+    color:#2ecc71;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.contenedor-empresas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.empresa{
+    background:#071f17;
+    padding:30px;
+    border-radius:15px;
+    border-left:5px solid #2ecc71;
+}
+
+.empresa h3{
+    color:#2ecc71;
+    font-size:28px;
+}
+
+.empresa p{
+    color:#ccc;
+    margin:10px 0;
+}
+
+.empresa span{
+    font-size:25px;
+    font-weight:bold;
+}
+
+/* Tendencias */
+
+.tendencias{
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+
+.tendencias h2{
+    color:#2ecc71;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.grafica{
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:25px;
+}
+
+.barra{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.valor{
+    width:60px;
+    background:linear-gradient(#2ecc71,#0f8b5f);
+    border-radius:10px 10px 0 0;
+}
+
+.enero{height:150px;}
+.febrero{height:220px;}
+.marzo{height:270px;}
+.abril{height:200px;}
+.mayo{height:320px;}
+.junio{height:280px;}
+
+.barra span{
+    margin-bottom:10px;
+}
+
+/* Tabla */
+
+.tabla{
+    width:90%;
+    margin:100px auto;
+}
+
+.tabla h2{
+    text-align:center;
+    color:#2ecc71;
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#0f8b5f;
+}
+
+th,td{
+    padding:18px;
+    text-align:center;
+}
+
+tbody tr{
+    background:#071f17;
+    border-bottom:1px solid #0f8b5f;
+}
+
+tbody tr:hover{
+    background:#0b2c20;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .contenido h1{
+        font-size:42px;
+    }
+
+    .contenido p{
+        font-size:16px;
+    }
+
+    .valor{
+        width:35px;
+    }
+
+    .grafica{
+        gap:10px;
+    }
+}

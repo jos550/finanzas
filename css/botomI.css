@@ -1,0 +1,16 @@
+.botonI{
+    position:left;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color:#fdfd0f ;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 2px 2px 3px gray;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease all 0.3s;
+}
